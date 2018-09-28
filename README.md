@@ -1,0 +1,2 @@
+# yyBlog
+yy learns django
