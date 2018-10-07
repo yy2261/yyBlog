@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'Article',
 ]
 
 MIDDLEWARE = [
@@ -54,7 +55,7 @@ ROOT_URLCONF = 'YyBlog.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [BASE_DIR+"/templates",],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -78,7 +79,7 @@ DATABASES = {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'yyblog',
 	'USER': 'root',
-	'PASSWORD': $password,
+	'PASSWORD': os.environ['PASSWORD'],
 	'HOST': 'localhost',
 	'PORT': '3306',
     }
